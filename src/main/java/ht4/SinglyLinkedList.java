@@ -1,4 +1,4 @@
-package main.java;
+package ht4;
 
 public class SinglyLinkedList<T> extends AbstractList<T> {
 
@@ -12,6 +12,7 @@ public class SinglyLinkedList<T> extends AbstractList<T> {
 
     private Node<T> head;
 
+    @Override
     public void addFirst(T item) {
         Node<T> n = new Node<>(item);
         n.next = head;
@@ -19,6 +20,7 @@ public class SinglyLinkedList<T> extends AbstractList<T> {
         size++;
     }
 
+    @Override
     public T removeFirst() {
         if (head == null) return null;
         T val = head.data;
@@ -27,23 +29,31 @@ public class SinglyLinkedList<T> extends AbstractList<T> {
         return val;
     }
 
+    @Override
     public T getFirst() {
         if (head == null) return null;
         return head.data;
     }
 
-    @Override
     public void add(T item) {
-        throw new UnsupportedOperationException("Unimplemented method 'add'");
+        Node<T> n = new Node<>(item);
+        if (head == null) {
+            head = n;
+        } else {
+            Node<T> current = head;
+            while (current.next != null) {
+                current = current.next;
+            }
+            current.next = n;
+        }
+        size++;
     }
 
-    @Override
     public T get(int index) {
 
         throw new UnsupportedOperationException("Unimplemented method 'get'");
     }
 
-    @Override
     public T remove(int index) {
         throw new UnsupportedOperationException("Unimplemented method 'remove'");
     }

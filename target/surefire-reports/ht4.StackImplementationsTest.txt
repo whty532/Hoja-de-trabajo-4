@@ -1,0 +1,20 @@
+-------------------------------------------------------------------------------
+Test set: ht4.StackImplementationsTest
+-------------------------------------------------------------------------------
+Tests run: 4, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.024 s <<< FAILURE! -- in ht4.StackImplementationsTest
+ht4.StackImplementationsTest.testArrayListStack -- Time elapsed: 0.009 s <<< ERROR!
+java.lang.IllegalStateException: Stack is empty
+	at ht4.ArrayListStack.pop(ArrayListStack.java:17)
+	at ht4.StackImplementationsTest.testArrayListStack(StackImplementationsTest.java:19)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+ht4.StackImplementationsTest.testListStackSingly -- Time elapsed: 0.002 s <<< ERROR!
+java.lang.IllegalStateException: Stack is empty
+	at ht4.ListStack.pop(ListStack.java:19)
+	at ht4.StackImplementationsTest.testListStackSingly(StackImplementationsTest.java:46)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+

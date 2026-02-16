@@ -1,4 +1,4 @@
-package main.java;
+package ht4;
 
 
 public class ListStack<T> extends AbstractStack<T> {
@@ -8,24 +8,28 @@ public class ListStack<T> extends AbstractStack<T> {
         this.list = list;
     }
 
+    @Override
     public void push(T item) {
-        list.add(item);
+        list.addFirst(item);
     }
 
+    @Override
     public T pop() {
         if (isEmpty()) {
             throw new IllegalStateException("Stack is empty");
         }
-        return list.remove(list.size() - 1);
+        return list.removeFirst();
     }
 
+    @Override
     public T peek() {
         if (isEmpty()) {
             throw new IllegalStateException("Stack is empty");
         }
-        return list.get(list.size() - 1);
+        return list.getFirst();
     }
 
+    @Override
     public int size() {
         return list.size();
     }

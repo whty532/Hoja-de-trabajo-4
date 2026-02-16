@@ -1,4 +1,4 @@
-package main.java;
+package ht4;
 
 public interface MyStack<T> {
     void push(T item);

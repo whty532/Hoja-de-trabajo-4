@@ -1,7 +1,8 @@
-package main.java;
+package ht4;
 
 
 public class AbstractStack<T> implements MyStack<T> {
+    @Override
     public boolean isEmpty() {
         return size() == 0;
     }
