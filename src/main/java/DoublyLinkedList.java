@@ -53,6 +53,5 @@ public class DoublyLinkedList<T> extends AbstractList<T> {
     public T remove(int index) {
         throw new UnsupportedOperationException("Unimplemented method 'remove'");
     }
-
     
 }
